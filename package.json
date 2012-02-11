@@ -1,0 +1,17 @@
+{
+    "name": "EBR-Boilerplate"
+  , "author": "John Schwartz Jacobsen (john@johnschwartz.dk)"
+  , "description": "A simple boilerplate used for my apps."
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    }
+  , "devDependencies": {
+      "jasmine-node": ">= 0.0.1"
+    , "coffee-script": ">= 1.2.0"
+    , "nodemon": ">= 0.0.1"
+    }
+}
