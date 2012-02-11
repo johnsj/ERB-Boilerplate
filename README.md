@@ -12,7 +12,7 @@ In this Express.js setup, I'm using Jade and Stylus. If you want to use somethin
 
 The first thing to do is to download the boilerplate. In the terminal, use this command:
 
-  LINK_TO_GITHUB
+  git clone git://github.com/johnsj/ERB-Boilerplate.git
 
 Next, you install the dependencies:
 
