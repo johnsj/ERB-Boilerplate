@@ -2,7 +2,7 @@
 
 This boilerplate is meant to be used in lightweight web-apps. It is however possible to extend the 
 
-Being a fan of [Express.js](http://expressjs.com/), [Backbone.js](http://documentcloud.github.com/backbone/), [Require.js](http://requirejs.org/) and [CoffeeScript](http://coffeescript.org/)), I made this boilerplate to use in my future projects.
+Being a fan of [Express.js](http://expressjs.com/), [Backbone.js](http://documentcloud.github.com/backbone/), [Require.js](http://requirejs.org/) and [CoffeeScript](http://coffeescript.org/), I made this boilerplate to use in my future projects.
 
 ### Express.js setting in this boilerplate
 
