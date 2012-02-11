@@ -12,11 +12,11 @@ In this Express.js setup, I'm using Jade and Stylus. If you want to use somethin
 
 The first thing to do is to download the boilerplate. In the terminal, use this command:
 
-  git clone git://github.com/johnsj/ERB-Boilerplate.git
+    git clone git://github.com/johnsj/ERB-Boilerplate.git
 
 Next, you install the dependencies:
 
-  npm install
+    npm install
 
 Now you should be ready to create some awesome web-apps :)
 
@@ -26,7 +26,7 @@ The intention was NOT to edit the `.js` files. Only edit the `.coffee` files ins
 
 In order to keep things simple, I suggest that you open a terminal, and type:
 
-  /path/to/erb-boilerplate/coffee -o ./ -cbw coffee/
+    /path/to/erb-boilerplate/coffee -o ./ -cbw coffee/
 
 Notice that I'm using the -b flag. If you want the top-level function safety-wrapper,
 just remove the 'b'.
