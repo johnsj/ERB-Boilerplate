@@ -1,9 +1,11 @@
-define [  'jquery'
-          'underscore'
-          'backbone']
-, ($, _, Backbone) ->
+define [
+  'jQuery'
+  'Underscore'
+  'Backbone'
+  'Router'
+],($, _, Backbone, Router) ->
   initialize = () ->
-    console.log "Backbone App Ready for development"
+    Router.initialize()
     return
 
   return {initialize: initialize}

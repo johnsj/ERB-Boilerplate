@@ -1,8 +1,8 @@
 
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define(['jQuery', 'Underscore', 'Backbone', 'Router'], function($, _, Backbone, Router) {
   var initialize;
   initialize = function() {
-    console.log("Backbone App Ready for development");
+    Router.initialize();
   };
   return {
     initialize: initialize
