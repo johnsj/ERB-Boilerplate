@@ -17,31 +17,35 @@ define [
   'Models/testmodel'
 ], ($, _, Backbone, testview, testcollectionview, testcollection, testmodel) ->
   AppRouter = Backbone.Router.extend {
+
+    initialize: () ->
+      testc = new testcollection()
+      window.testc = testc
+
+
     routes:{
     
-      '/testrouter' : 'routerTest'
+      '' : 'routerTest'
 
       #Default
       '*actions' : 'defaultAction'
     }
 
     routerTest: () ->
-      testc = new testcollection()
-      window.testc = testc
 
-      testcv = new testcollectionview {collection: testc}
+      testcv = new testcollectionview {collection: window.testc}
       testc.fetch()
       testcv.render()
 
       return
 
     defaultAction: () ->
-      console.log "No action found"
+      $("#container").html "No route found"
       return
   }
 
   initialize = () ->
-    app_router = new AppRouter
+    window.app_router = new AppRouter
     Backbone.history.start()
     return
 
