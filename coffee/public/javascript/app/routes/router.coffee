@@ -8,7 +8,14 @@ define [
 
   #Load the views to be used in the router
   'Views/testview'
-], ($, _, Backbone, testview) ->
+  'Views/testcollectionview'
+
+  #Test collection
+  'Collections/testcollection'
+
+  #Test model
+  'Models/testmodel'
+], ($, _, Backbone, testview, testcollectionview, testcollection, testmodel) ->
   AppRouter = Backbone.Router.extend {
     routes:{
     
@@ -19,10 +26,18 @@ define [
     }
 
     routerTest: () ->
-      testview.render()
+      testc = new testcollection()
+      window.testc = testc
+
+      testcv = new testcollectionview {collection: testc}
+      testc.fetch()
+      testcv.render()
+
+      return
 
     defaultAction: () ->
       console.log "No action found"
+      return
   }
 
   initialize = () ->

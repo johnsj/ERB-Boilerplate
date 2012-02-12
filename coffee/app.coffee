@@ -6,6 +6,7 @@ routes = {}
 express = require "express"
 
 routes.main = require "./app/routes/index"
+routes.api = require "./app/routes/api"
 
 app = module.exports = express.createServer()
 
@@ -39,6 +40,9 @@ app.configure 'production', () ->
 # Routes
 # ------
 app.get '/', routes.main.index
+
+app.get '/api', routes.api.testdata
+
 
 app.listen 3000
 console.log "Express server listening on port %d in %s mode", app.address().port, app.settings.env

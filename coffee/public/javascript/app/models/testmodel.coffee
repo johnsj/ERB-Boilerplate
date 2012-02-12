@@ -4,8 +4,4 @@ define [
   'Underscore'
   'Backbone'
 ], (_, Backbone)->
-  testModel = Backbone.Model.extend {
-    defaults: {
-      name: 'Harry Potter'
-    }
-  }
+  testModel = Backbone.Model.extend {}

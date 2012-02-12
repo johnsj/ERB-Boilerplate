@@ -1,5 +1,5 @@
 
-define(['jQuery', 'Underscore', 'Backbone', 'Views/testview'], function($, _, Backbone, testview) {
+define(['jQuery', 'Underscore', 'Backbone', 'Views/testview', 'Views/testcollectionview', 'Collections/testcollection', 'Models/testmodel'], function($, _, Backbone, testview, testcollectionview, testcollection, testmodel) {
   var AppRouter, initialize;
   AppRouter = Backbone.Router.extend({
     routes: {
@@ -7,10 +7,17 @@ define(['jQuery', 'Underscore', 'Backbone', 'Views/testview'], function($, _, Ba
       '*actions': 'defaultAction'
     },
     routerTest: function() {
-      return testview.render();
+      var testc, testcv;
+      testc = new testcollection();
+      window.testc = testc;
+      testcv = new testcollectionview({
+        collection: testc
+      });
+      testc.fetch();
+      testcv.render();
     },
     defaultAction: function() {
-      return console.log("No action found");
+      console.log("No action found");
     }
   });
   initialize = function() {

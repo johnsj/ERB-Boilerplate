@@ -13,16 +13,16 @@ define [
   'text!templates/test.html'
 ], ($, _, Backbone, testcollection, testTemplate) ->
   testView = Backbone.View.extend {
-    el: $("#container")
+    tagName: 'li'
 
     initialize: () ->
-      @collection = testcollection
-      @collection.add {name: "John"}
+      _.bindAll(@, 'render')
+      @model.bind 'change', @render
+      @template = _.template testTemplate
 
-      compiledTemplate = _.template testTemplate, {testmodels : @collection.models}
+    render: ()->
+      renderedTemplate = @template(@model.toJSON())
+      $(@el).html renderedTemplate
 
-      $(@el).html compiledTemplate
-      return
+      return @
   }
-
-  return new testView

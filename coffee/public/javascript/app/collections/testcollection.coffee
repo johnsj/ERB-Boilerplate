@@ -9,6 +9,5 @@ define [
 ],(_, Backbone, testmodel) ->
   testCollection = Backbone.Collection.extend {
     model: testmodel
+    url: "/api"
   }
-
-  return new testCollection

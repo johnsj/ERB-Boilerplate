@@ -6,6 +6,8 @@ express = require("express");
 
 routes.main = require("./app/routes/index");
 
+routes.api = require("./app/routes/api");
+
 app = module.exports = express.createServer();
 
 app.configure(function() {
@@ -36,6 +38,8 @@ app.configure('production', function() {
 });
 
 app.get('/', routes.main.index);
+
+app.get('/api', routes.api.testdata);
 
 app.listen(3000);
 
